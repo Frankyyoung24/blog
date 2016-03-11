@@ -212,6 +212,189 @@
             
               
                 
+                <a class="post-title-link" href="/blog/2016/03/10/GCD-4/" itemprop="url">
+                  Getting and Cleaning Data: Quiz 4
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-10T16:58:29+08:00" content="2016-03-10">
+              2016-03-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Quiz"><a href="#Quiz" class="headerlink" title="Quiz"></a>Quiz</h3><ol>
+<li><p>The American Community Survey distributes downloadable data about United States communities. Download the 2006 microdata survey about housing for the state of Idaho using download.file() from here:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv" target="_blank" rel="external">https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv</a></p>
+<p>and load the data into R. The code book, describing the variable names is here:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf" target="_blank" rel="external">https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FPUMSDataDict06.pdf</a></p>
+<p>Apply strsplit() to split all the names of the data frame on the characters “wgtp”. What is the value of the 123 element of the resulting list?</p>
+<ul>
+<li>“15”</li>
+<li>“w” “15”</li>
+<li>“” “15”</li>
+<li>“wgtp” “15”<br>​</li>
+</ul>
+</li>
+<li><p>Load the Gross Domestic Product data for the 190 ranked countries in this data set:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv" target="_blank" rel="external">https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv</a></p>
+<p>Remove the commas from the GDP numbers in millions of dollars and average them. What is the average?</p>
+<p>Original data sources:</p>
+<p><a href="http://data.worldbank.org/data-catalog/GDP-ranking-table" target="_blank" rel="external">http://data.worldbank.org/data-catalog/GDP-ranking-table</a></p>
+<ul>
+<li>377652.4</li>
+<li>293700.3</li>
+<li>387854.4</li>
+<li>381668.9<br>​</li>
+</ul>
+</li>
+<li><p>In the data set from Question 2 what is a regular expression that would allow you to count the number of countries whose name begins with “United”? Assume that the variable with the country names in it is named countryNames. How many countries begin with United?</p>
+<ul>
+<li>grep(“^United”,countryNames), 3</li>
+<li>grep(“^United”,countryNames), 4</li>
+<li>grep(“*United”,countryNames), 2</li>
+<li>grep(“United$”,countryNames), 3<br>​</li>
+</ul>
+</li>
+<li><p>Load the Gross Domestic Product data for the 190 ranked countries in this data set:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv" target="_blank" rel="external">https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv</a></p>
+<p>Load the educational data from this data set:</p>
+<p><a href="https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv" target="_blank" rel="external">https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv</a></p>
+<p>Match the data based on the country shortcode. Of the countries for which the end of the fiscal year is available, how many end in June?</p>
+<p>Original data sources:</p>
+<p><a href="http://data.worldbank.org/data-catalog/GDP-ranking-table" target="_blank" rel="external">http://data.worldbank.org/data-catalog/GDP-ranking-table</a></p>
+<p><a href="http://data.worldbank.org/data-catalog/ed-stats" target="_blank" rel="external">http://data.worldbank.org/data-catalog/ed-stats</a></p>
+<ul>
+<li>31</li>
+<li>13</li>
+<li>8</li>
+<li>15<br>​</li>
+</ul>
+</li>
+<li><p>You can use the quantmod (<a href="http://www.quantmod.com/" target="_blank" rel="external">http://www.quantmod.com/</a>) package to get historical stock prices for publicly traded companies on the NASDAQ and NYSE. Use the following code to download data on Amazon’s stock price and get the times the data was sampled.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(quantmod)</span><br><span class="line">amzn = getSymbols(<span class="string">"AMZN"</span>,auto.assign=<span class="literal">FALSE</span>)</span><br><span class="line">sampleTimes = index(amzn)</span><br></pre></td></tr></table></figure>
+<p>How many values were collected in 2012? How many values were collected on Mondays in 2012?</p>
+<ul>
+<li>251, 47</li>
+<li>250, 47</li>
+<li>252, 47</li>
+<li>252, 50</li>
+</ul>
+</li>
+</ol>
+<h3 id="My-solution"><a href="#My-solution" class="headerlink" title="My solution"></a>My solution</h3><ol>
+<li><p>Download the file from the Internet, use browser or commands:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fileUrl &lt;- <span class="string">"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"</span></span><br><span class="line">download.file(fileUrl, destfile = <span class="string">"hid.csv"</span>, method = <span class="string">"curl"</span>)</span><br></pre></td></tr></table></figure>
+<p>analysis the data:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">housingdata &lt;- read.csv(<span class="string">"hid.csv"</span>)</span><br><span class="line">list &lt;- strsplit(names(housingdata), split = <span class="string">"wgtp"</span>)</span><br><span class="line">list[<span class="number">123</span>]</span><br></pre></td></tr></table></figure>
+<p>the result is <code>&quot;&quot;, &quot;15&quot;</code>.</p>
+</li>
+<li><p>Download the file from the Internet, use browser or commands:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fileUrl &lt;- <span class="string">"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"</span></span><br><span class="line">download.file(fileUrl, destfile = <span class="string">"GDP.csv"</span>, method = <span class="string">"curl"</span>)</span><br><span class="line">gdp &lt;- read.csv(<span class="string">"GDP.csv"</span>, skip = <span class="number">4</span>, nrows = <span class="number">190</span>)</span><br><span class="line">view(gdp)</span><br></pre></td></tr></table></figure>
+<p>analysis the data:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cleanData &lt;- gsub(<span class="string">","</span>, <span class="string">""</span>, gdp$X.4)</span><br><span class="line">cleanData &lt;- (as.numeric(cleanData))</span><br><span class="line">mean(cleanData, na.rm = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
+<p>the result is <code>377652.4</code>.</p>
+</li>
+<li><p>Analysis the data with the command line:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">countryNames &lt;- gdp$X.3</span><br><span class="line">grep(<span class="string">"^United"</span>,countryNames)</span><br></pre></td></tr></table></figure>
+<p>shows:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>]  <span class="number">1</span>  <span class="number">6</span> <span class="number">32</span></span><br><span class="line">Warning messages:</span><br><span class="line"><span class="number">1</span>: In grep(<span class="string">"^United"</span>, countryNames) :</span><br><span class="line">  input string <span class="number">99</span> is invalid <span class="keyword">in</span> this locale</span><br><span class="line"><span class="number">2</span>: In grep(<span class="string">"^United"</span>, countryNames) :</span><br><span class="line">  input string <span class="number">186</span> is invalid <span class="keyword">in</span> this locale</span><br></pre></td></tr></table></figure>
+<p>the answer is <code>grep(&quot;^United&quot;,countryNames), 3</code>.</p>
+</li>
+<li><p>Download the file from the Internet, use browser or commands:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fileUrl1 &lt;- <span class="string">"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FGDP.csv"</span></span><br><span class="line">fileUrl2 &lt;- <span class="string">"https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2FEDSTATS_Country.csv"</span></span><br><span class="line">download.file(fileUrl1, destfile = <span class="string">"GDP.csv"</span>, method = <span class="string">"curl"</span>)</span><br><span class="line">download.file(fileUrl2, destfile = <span class="string">"edu.csv"</span>, method = <span class="string">"curl"</span>)</span><br></pre></td></tr></table></figure>
+<p>analysis the data:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">gdpdata &lt;- read.csv(<span class="string">"GDP.csv"</span>, skip = <span class="number">4</span>, nrows = <span class="number">190</span>)</span><br><span class="line">edudata &lt;- read.csv(<span class="string">"edu.csv"</span>)</span><br><span class="line">View(gdpdata)</span><br><span class="line">View(edudata)</span><br><span class="line">mergeData &lt;- merge(gdpdata, edudata, by.x = <span class="string">"X"</span>, by.y = <span class="string">"CountryCode"</span>)</span><br><span class="line">View(mergeData)</span><br><span class="line">june &lt;- grep(<span class="string">'Fiscal year end: June'</span>, mergeData$Special.Notes)</span><br><span class="line">length(june)</span><br></pre></td></tr></table></figure>
+<p>the result is <code>13</code>.</p>
+</li>
+<li><p>Install the package quantmod:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">"quantmod"</span>)</span><br></pre></td></tr></table></figure>
+<p>Use the following code to download data on Amazon’s stock price and get the times the data was sampled:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(quantmod)</span><br><span class="line">amzn = getSymbols(<span class="string">"AMZN"</span>,auto.assign=<span class="literal">FALSE</span>)</span><br><span class="line">sampleTimes = index(amzn)</span><br></pre></td></tr></table></figure>
+<p>analysis the data:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">year2012 &lt;- grepl(<span class="string">'2012-*'</span>, sampleTimes)</span><br><span class="line">sampleTimes2012 &lt;- subset(sampleTimes, year2012)</span><br><span class="line">day &lt;- format(sampleTimes2012, <span class="string">'%A'</span>)</span><br><span class="line">table(year2012)</span><br></pre></td></tr></table></figure>
+<p>it shows:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">year2012</span><br><span class="line"><span class="literal">FALSE</span>  <span class="literal">TRUE</span> </span><br><span class="line"> <span class="number">2063</span>   <span class="number">250</span></span><br></pre></td></tr></table></figure>
+<p>then:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table(day)</span><br></pre></td></tr></table></figure>
+<p>is shows:</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">day</span><br><span class="line">   Friday    Monday  Thursday   Tuesday Wednesday </span><br><span class="line">       <span class="number">51</span>        <span class="number">47</span>        <span class="number">51</span>        <span class="number">50</span>        <span class="number">51</span></span><br></pre></td></tr></table></figure>
+<p>the result is <code>250, 47</code>.</p>
+<p>​<br>The END.</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/blog/2016/03/09/GCD-3/" itemprop="url">
                   Getting and Cleaning Data: Quiz 3
                 </a>
@@ -862,7 +1045,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
