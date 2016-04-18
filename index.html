@@ -265,8 +265,8 @@
 <p>This guide is aimed at pet bioinformaticians, and is meant to guide them towards better career development.</p>
 <ol>
 <li><p>Make friends with local bioinformatics groups</p>
-<pre><code>You may not be in the local bioinformatics group, but if there is one, seek them out, introduce yourself and make friends. Ask if you can attend their lab meetings and journal club. Tell the group leader you want to make sure you learn good practice in bioinformatics, and would like their help. If there isn’t one in your institute, where is the nearest one geographically? Can you travel to meet them? If so, do it; if not, attempt to skype into meetings etc. Develop electronic relationships with people and groups on the Internet. Develop a support group who will be able to help you with the kind of problems your lab-based group cannot.
-</code></pre></li>
+<p>You may not be in the local bioinformatics group, but if there is one, seek them out, introduce yourself and make friends. Ask if you can attend their lab meetings and journal club. Tell the group leader you want to make sure you learn good practice in bioinformatics, and would like their help. If there isn’t one in your institute, where is the nearest one geographically? Can you travel to meet them? If so, do it; if not, attempt to skype into meetings etc. Develop electronic relationships with people and groups on the Internet. Develop a support group who will be able to help you with the kind of problems your lab-based group cannot.</p>
+</li>
 <li><p>Talk to your computing group<br>Find them, tell them what your work is about, what resource you will need and ask them how best to get access to those resources in the environment you exist in. If you don’t know what resources you will need, see point (1) above. Your local IT team will be essential to your sucess. Befriend the linux sys admin, they might save your life.</p>
 </li>
 <li><p>Obtain clear expectations<br>Speak to your manager and get them to outline exactly what their expectations are of you. If you are funded on a grant, get the grant application and read exactly what your manager has promised you will deliver. Prepare your manager for the possibility that their expectations may need to be altered, especially if they are unrealistic.</p>
@@ -334,8 +334,8 @@
             
               
                 
-                <a class="post-title-link" href="/blog/2016/03/22/525x/" itemprop="url">
-                  Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x
+                <a class="post-title-link" href="/blog/2016/03/22/AIIPP-Quiz-1/" itemprop="url">
+                  An Introduction to Interactive Programming in Python (Part 1): Quiz 1
                 </a>
               
             
@@ -376,9 +376,126 @@
       
         
           
-            <h2 id="Data-Analysis-for-Life-Sciences-1-Statistics-and-R-HarvardX-PH525-1x"><a href="#Data-Analysis-for-Life-Sciences-1-Statistics-and-R-HarvardX-PH525-1x" class="headerlink" title="Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x"></a>Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x</h2><p>Finished at 22 March 2016. Keep working.</p>
-<p>A very useful link for study:</p>
-<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/155770_0c286e39b48b4670ab7ababb103a7448.html" target="_blank" rel="external">https://rstudio-pubs-static.s3.amazonaws.com/155770_0c286e39b48b4670ab7ababb103a7448.html</a></p>
+            <h3 id="Quiz-1"><a href="#Quiz-1" class="headerlink" title="Quiz 1"></a>Quiz 1</h3><ol>
+<li><p>An 𝚒𝚏 statement can have at most how many 𝚎𝚕𝚜𝚎 parts?</p>
+<ul>
+<li><p>1</p>
+</li>
+<li><p>0</p>
+</li>
+<li><p>Unlimited, i.e., 0 or more</p>
+<p>The answer is <code>1</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>Consider the Boolean expression 𝚗𝚘𝚝 (𝚙 𝚘𝚛 𝚗𝚘𝚝 𝚚). Give the four following values in order, separated only by spaces:</p>
+<p>the value of the expression when 𝚙 is 𝚃𝚛𝚞𝚎, and 𝚚 is 𝚃𝚛𝚞𝚎,</p>
+<p>the value of the expression when 𝚙 is 𝚃𝚛𝚞𝚎, and 𝚚 is 𝙵𝚊𝚕𝚜𝚎,</p>
+<p>the value of the expression when 𝚙 is 𝙵𝚊𝚕𝚜𝚎, and 𝚚 is 𝚃𝚛𝚞𝚎,</p>
+<p>the value of the expression when 𝚙 is 𝙵𝚊𝚕𝚜𝚎, and 𝚚 is 𝙵𝚊𝚕𝚜𝚎,</p>
+<p>Remember, each of the four results you provide should be 𝚃𝚛𝚞𝚎 or 𝙵𝚊𝚕𝚜𝚎 with the proper capitalization.</p>
+<p>The answer is <code>False, False, True, False</code>.</p>
+</li>
+<li><p>A common error for beginning programmers is to confuse the behavior of 𝚙𝚛𝚒𝚗𝚝 statements and 𝚛𝚎𝚝𝚞𝚛𝚗 statements.</p>
+<ul>
+<li>𝚙𝚛𝚒𝚗𝚝 statements can appear anywhere in your program and print a specified value(s) in the console. Note that execution of your Python program continues onward to the following statement. Remember that executing a 𝚙𝚛𝚒𝚗𝚝 statement inside a function definition does not return a value from the function.</li>
+<li>𝚛𝚎𝚝𝚞𝚛𝚗 statements appear inside functions. The value associated with the 𝚛𝚎𝚝𝚞𝚛𝚗 statement is substituted for the expression that called the function. Note that executing a 𝚛𝚎𝚝𝚞𝚛𝚗 statement terminates execution of the function definition immediately. Any statements in the function definition following the 𝚛𝚎𝚝𝚞𝚛𝚗 statement are ignored. Execution of your Python code resumes with the execution of the statement after the function call.</li>
+</ul>
+<p>As an example to illustrate these points, consider the following piece of code:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">do_stuff</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Hello world"</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">"Is it over yet?"</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Goodbye cruel world!"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> do_stuff()</span><br></pre></td></tr></table></figure>
+<p>Note that this code calls the function 𝚍𝚘<em>𝚜𝚝𝚞𝚏𝚏 in the last 𝚙𝚛𝚒𝚗𝚝 statement. The definition of 𝚍𝚘</em>𝚜𝚝𝚞𝚏𝚏 includes two 𝚙𝚛𝚒𝚗𝚝 statements and one 𝚛𝚎𝚝𝚞𝚛𝚗 statement.</p>
+<p>Which of the following is the console output that results from executing this piece of code? While it is trivial to solve this question by cutting and pasting this code into CodeSkulptor, we suggest that you first attempt this problem by attempting to execute this code in your mind.</p>
+<ul>
+<li><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello world</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Hello world</span><br><span class="line">Is it over yet?</span><br><span class="line">Goodbye cruel world!</span><br><span class="line">Is it over yet?</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello world</span><br><span class="line">Is it over yet?</span><br></pre></td></tr></table></figure>
+</li>
+<li><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Hello world</span><br><span class="line">Is it over yet?</span><br><span class="line">Goodbye cruel world!</span><br></pre></td></tr></table></figure>
+<p>The answer is </p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Hello world</span><br><span class="line">Is it over yet?</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ul>
+</li>
+<li><p>Given a non-negative integer 𝚗, which of the following expressions computes the ten’s digit of 𝚗? For example, if 𝚗 is 123, then we want the expression to evaluate to 2.</p>
+<p>Think about each expression mathematically, but also try each in CodeSkulptor.</p>
+<ul>
+<li><p>(𝚗 - 𝚗 % 𝟷𝟶) / 𝟷𝟶</p>
+</li>
+<li><p>((𝚗 - 𝚗 % 𝟷𝟶) % 𝟷𝟶𝟶) / 𝟷𝟶</p>
+</li>
+<li><p>(𝚗 % 𝟷𝟶𝟶 - 𝚗 % 𝟷𝟶) / 𝟷𝟶</p>
+</li>
+</ul>
+<p>The answer is <code>(n%100 - n%10)/10</code> and <code>((n - n%10)%100)/10</code>.</p>
+</li>
+<li><p>The function calls 𝚛𝚊𝚗𝚍𝚘𝚖.𝚛𝚊𝚗𝚍𝚒𝚗𝚝(𝟶, 𝟷𝟶) and 𝚛𝚊𝚗𝚍𝚘𝚖.𝚛𝚊𝚗𝚍𝚛𝚊𝚗𝚐𝚎(𝟶, 𝟷𝟶) generate random numbers in different ranges. What number can be generated by one of these functions, but not the other?</p>
+<p>(Refer to the CodeSkulptor documentation.)</p>
+<p>By the way, we (and most Python programmers) always prefer to use 𝚛𝚊𝚗𝚍𝚘𝚖.𝚛𝚊𝚗𝚍𝚛𝚊𝚗𝚐𝚎() since it handles numerical ranges in a way that is more consistent with the rest of Python.</p>
+<p>The answer is <code>10</code>.</p>
+</li>
+<li><p>Implement the mathematical function f(x)=−5x[^5]+69x[^2]−47 as a Python function. Then use Python to compute the function values f(0), f(1), f(2), and f(3). Enter the maximum of these four values calculated.</p>
+<p>The answer is <code>69</code>.</p>
+</li>
+<li><p>When investing money, an important concept to know is compound interest.</p>
+<p>The equation <em>FV=PV(1+rate)[^periods]</em> relates the following four quantities.</p>
+<ul>
+<li><p>The <em>present value (PV)</em> of your money is how much money you have now.</p>
+</li>
+<li><p>The <em>future value (FV)</em> of your money is how much money you will have in the future.</p>
+</li>
+<li><p>The <em>nominal interest rate per period (rate)</em> is how much interest you earn during a particular length of time, <strong>before</strong> accounting for compounding. This is typically expressed as a percentage.</p>
+</li>
+<li><p>The <em>number of periods (periods)</em> is how many periods in the future this calculation is for.</p>
+</li>
+</ul>
+<p>Finish the following code, run it, and submit the printed number. Provide at least four digits of precision after the decimal point.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">future_value</span><span class="params">(present_value, annual_rate, periods_per_year, years)</span>:</span></span><br><span class="line">    rate_per_period = annual_rate / periods_per_year</span><br><span class="line">    periods = periods_per_year * years</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Put your code here.</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"$1000 at 2% compounded daily for 3 years yields $"</span>, future_value(<span class="number">1000</span>, <span class="number">.02</span>, <span class="number">365</span>, <span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>Before submitting your answer, test your function on the following example.</p>
+<p>𝚏𝚞𝚝𝚞𝚛𝚎_𝚟𝚊𝚕𝚞𝚎(𝟻𝟶𝟶, .𝟶𝟺, 𝟷𝟶, 𝟷𝟶) should return 745.317442824</p>
+<p>The answer is <code>1061.83480113</code>.</p>
+</li>
+<li><p>There are several ways to calculate the area of a regular polygon. Given the number of sides, n, and the length of each side, s, the polygon’s area is</p>
+<p>x = ns[^2]/4*tan(π/n)</p>
+<p>For example, a regular polygon with 5 sides, each of length 7 inches, has area 84.3033926289 square inches.</p>
+<p>Write a function that calculates the area of a regular polygon, given the number of sides and length of each side. Submit the area of a regular polygon with 7 sides each of length 3 inches. Enter a number (and not the units) with at least four digits of precision after the decimal point.</p>
+<p>Note that the use of inches as the unit of measurement in these examples is arbitrary. Python only keeps track of the numerical values, not the units.</p>
+<p>The answer is <code>32.705211996</code>.</p>
+</li>
+<li><p>Running the following program results in the error</p>
+<p>𝚂𝚢𝚗𝚝𝚊𝚡𝙴𝚛𝚛𝚘𝚛: 𝚋𝚊𝚍 𝚒𝚗𝚙𝚞𝚝 𝚘𝚗 𝚕𝚒𝚗𝚎 𝟾 (‘𝚛𝚎𝚝𝚞𝚛𝚗’).</p>
+<p>Which of the following describes the problem?</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_of_2</span><span class="params">(a, b)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> a &gt; b:</span><br><span class="line">        <span class="keyword">return</span> a</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> b</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_of_3</span><span class="params">(a, b, c)</span>:</span></span><br><span class="line"><span class="keyword">return</span> max_of_2(a, max_of_2(b, c))</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>Incorrect indentation</p>
+</li>
+<li><p>Extra parenthesis</p>
+</li>
+<li><p>Wrong number of arguments in function call</p>
+</li>
+<li><p>Misspelled variable name</p>
+</li>
+<li><p>Missing colon</p>
+</li>
+<li><p>Missing parenthesis</p>
+</li>
+<li><p>Missing parenthesis</p>
+</li>
+<li><p>Misspelled keyword</p>
+<p>The answer is <code>Incorrect indentation</code>.</p>
+</li>
+</ul>
+</li>
+<li><p>The following code has a number of syntactic errors in it. The intended math calculations are correct, so the only errors are syntactic. Fix the syntactic errors.</p>
+<p>Once the code has been fully corrected, it should print out two numbers. The first should be 1.09888451159. Submit the second number printed in CodeSkulptor. Provide at least four digits of precision after the decimal point.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">define project_to_distance(point_x point_y distance):</span><br><span class="line">    dist_to_origin = math.square_root(pointx ** <span class="number">2</span> + pointy ** <span class="number">2</span>)</span><br><span class="line">     scale == distance / dist_to_origin</span><br><span class="line">    <span class="keyword">print</span> point_x * scale, point_y * scale</span><br><span class="line"></span><br><span class="line">project-to-distance(<span class="number">2</span>, <span class="number">7</span>, <span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p>The answer is <code>3.84609579056</code>.</p>
+</li>
+</ol>
+<p>The source code see the [link][<a href="https://github.com/UtkarshPathrabe/An-Introduction-to-Interactive-Programming-in-Python----Coursera/tree/master/Week%2001/Week%201%20Quiz" target="_blank" rel="external">https://github.com/UtkarshPathrabe/An-Introduction-to-Interactive-Programming-in-Python----Coursera/tree/master/Week%2001/Week%201%20Quiz</a>].</p>
+<p>The end.</p>
 
           
         
@@ -587,6 +704,92 @@
 </li>
 </ol>
 <p>The end.</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/blog/2016/03/22/525x/" itemprop="url">
+                  Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-03-22T22:32:16+08:00" content="2016-03-22">
+              2016-03-22
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Data-Analysis-for-Life-Sciences-1-Statistics-and-R-HarvardX-PH525-1x"><a href="#Data-Analysis-for-Life-Sciences-1-Statistics-and-R-HarvardX-PH525-1x" class="headerlink" title="Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x"></a>Data Analysis for Life Sciences 1 Statistics and R_HarvardX PH525.1x</h2><p>Finished at 22 March 2016. Keep working.</p>
+<p>A very useful link for study:</p>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/155770_0c286e39b48b4670ab7ababb103a7448.html" target="_blank" rel="external">https://rstudio-pubs-static.s3.amazonaws.com/155770_0c286e39b48b4670ab7ababb103a7448.html</a></p>
 
           
         
@@ -1380,7 +1583,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/blog/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">posts</span>
             </a>
           </div>
